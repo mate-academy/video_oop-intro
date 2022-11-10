@@ -10,7 +10,7 @@
     age: 38,
     isCoach: true,
   };
-  
+
   function sayHi4(user: User) {
     let message = 'Hi!';
   
@@ -24,13 +24,8 @@
 
     console.log(message);
   }
-  
+
+
+
   sayHi4(misha);
-  // sayHi4({});
-  
-  sayHi4({
-    name: 'Perto',
-    age: 57,
-    isCoach: false,
-  });
 }

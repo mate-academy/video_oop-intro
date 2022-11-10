@@ -14,7 +14,7 @@
   function sayHi5(user: User) {
     let message = 'Hi!';
 
-    if (user.isCoach) {
+    if (this.isCoach) {
       message += ` I am your coach ${user.name}.`;
     } else {
       message += ` I am a student ${user.name}.`;
@@ -24,8 +24,10 @@
 
     console.log(message);
   }
-
-  const misha: User = new User('Misha', 38, true);
-
+  
+  let misha = new User('Misha', 38, true);
+  let petro = new User('Petro', 57, false);
+  
   sayHi5(misha);
+  sayHi5(petro);
 }

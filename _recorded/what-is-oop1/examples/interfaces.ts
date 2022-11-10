@@ -1,19 +1,19 @@
 {
-  class User {
+  interface User {
     name: string;
     age: number;
     isCoach: boolean;
-
-    constructor(name: string, age: number, isCoach: boolean) {
-      this.name = name;
-      this.age = age;
-      this.isCoach = isCoach;
-    }
   }
 
-  function sayHi5(user: User) {
+  const misha: User = {
+    name: 'Misha',
+    age: 38,
+    isCoach: true,
+  };
+  
+  function sayHi4(user: User) {
     let message = 'Hi!';
-
+  
     if (user.isCoach) {
       message += ` I am your coach ${user.name}.`;
     } else {
@@ -24,8 +24,13 @@
 
     console.log(message);
   }
-
-  const misha: User = new User('Misha', 38, true);
-
-  sayHi5(misha);
+  
+  sayHi4(misha);
+  // sayHi4({});
+  
+  sayHi4({
+    name: 'Perto',
+    age: 57,
+    isCoach: false,
+  });
 }
