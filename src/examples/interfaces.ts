@@ -1,6 +1,6 @@
 {
   interface User {
-    name: string;
+    readonly name: string;
     age: number;
     isCoach: boolean;
   }
@@ -25,7 +25,7 @@
     console.log(message);
   }
 
-
+  misha.name = '';
 
   sayHi4(misha);
 }
