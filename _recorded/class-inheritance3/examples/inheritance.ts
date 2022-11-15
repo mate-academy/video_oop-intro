@@ -10,6 +10,10 @@
     sayHi() {
       console.log(`Hi! I am your coach ${this._name}. I am ${this._age}`);
     }
+
+    conductLesson() {
+      
+    }
   }
 
   class Student extends User {
