@@ -27,7 +27,11 @@
   let petro = new Student('Petro');
   let john = new Mentor('John');
 
-  misha.sayHi();
-  petro.sayHi();
-  john.sayHi();
+  greet1([misha, petro, john]);
+
+  function greet1(guests: User[]) {
+    for (const guest of guests) {
+      // guest.sayHi();
+    }
+  }
 }

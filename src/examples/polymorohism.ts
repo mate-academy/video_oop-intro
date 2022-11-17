@@ -3,12 +3,14 @@
     constructor(
       protected _name: string,
     ) {}
+
+    sayHi() {}
   }
 
   class Coach extends User {
-    sayHi() {
-      console.log(`Hi! I am your coach ${this._name}.`);
-    }
+    // sayHi() {
+    //   console.log(`Hi! I am your coach ${this._name}.`);
+    // }
   }
 
   class Student extends User {
@@ -27,7 +29,11 @@
   let petro = new Student('Petro');
   let john = new Mentor('John');
 
-  misha.sayHi();
-  petro.sayHi();
-  john.sayHi();
+  greet3([misha, petro, john]);
+
+  function greet3(guests: User[]) {
+    for (const guest of guests) {
+      guest.sayHi();
+    }
+  }
 }

@@ -1,8 +1,10 @@
 {
-  class User {
+  abstract class User {
     constructor(
       protected _name: string,
     ) {}
+
+    abstract sayHi(): void;
   }
 
   class Coach extends User {
@@ -27,7 +29,11 @@
   let petro = new Student('Petro');
   let john = new Mentor('John');
 
-  misha.sayHi();
-  petro.sayHi();
-  john.sayHi();
+  greet4([misha, petro, john]);
+
+  function greet4(guests: User[]) {
+    for (const guest of guests) {
+      guest.sayHi();
+    }
+  }
 }

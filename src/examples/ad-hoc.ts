@@ -27,7 +27,17 @@
   let petro = new Student('Petro');
   let john = new Mentor('John');
 
-  misha.sayHi();
-  petro.sayHi();
-  john.sayHi();
+  greet2([misha, petro, john]);
+
+  function greet2(guests: User[]) {
+    for (const guest of guests) {
+      if (guest instanceof Coach) {
+        guest.sayHi();
+      } else if (guest instanceof Mentor) {
+        guest.sayHi();
+      } else if (guest instanceof Student) {
+        guest.sayHi();
+      }
+    }
+  }
 }
